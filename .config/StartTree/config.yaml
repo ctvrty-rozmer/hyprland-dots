@@ -1,0 +1,32 @@
+font_size: 22
+theme: pywal
+tree_1:
+  general:
+    gmail: "https://mail.google.com/"
+    outlook: "outlook.office.com/"
+    protonmail: "https://proton.me/"
+    github: "https://www.github.com/"
+  solvers: 
+    wiki: "https://uncovering-cicada.fandom.com/wiki/Uncovering_Cicada_Wiki"
+    irc webchat: "https://web.libera.chat/#cicadasolvers"
+    r/cicada: "https://www.reddit.com/r/cicada/"
+    art's wiki: "https://www.cicadasolvers.com/"
+tree_2:
+  social:
+    twitter: "https://www.x.com/"
+    tumblr: "https://www.tumblr.com/"
+    pinterest: "https://www.pinterest.com/"
+    r/unixporn: "https://www.reddit.com/r/unixporn/"
+  media:
+    weflix: "https://weflix.to/"
+    youtube: "https://www.youtube.com/"
+    twitch: "https://www.twitch.tv/"
+    ycombinator: "https://news.ycombinator.com/"
+tree_3:
+  utility:
+    OSINT framework: "https://osintframework.com/"
+    archwiki:
+      - "https://archlinux.org/"
+      - "arch wiki"
+    pastebin: "https://www.pastebin.com/"
+    storm prediction center: "https://www.spc.noaa.gov/"
