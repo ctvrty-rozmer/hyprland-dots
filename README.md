@@ -1,0 +1,2 @@
+# hyprland-dots
+modern dotfiles
