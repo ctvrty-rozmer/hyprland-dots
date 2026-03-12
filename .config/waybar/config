@@ -1,0 +1,143 @@
+{
+        "layer": "top",
+        "position": "top",
+        "reload_style_on_change": true,
+	"height": 8,
+        "modules-left": ["hyprland/workspaces"],
+        "modules-center": ["clock"],
+        "modules-right": ["group/expand","group/audio","group/networking","custom/notification"],
+	
+
+
+
+	"hyprland/workspaces": {
+            "format": "{name}",
+	"persistent-workspaces": {
+		"*": [ 1,2,3,4,5 ]
+	}
+	  
+	  
+	   },
+
+	   "hyprland/window": {
+		   "format": "{class}",
+		   "rewrite": {
+			   "(.*) — Mozilla Firefox": "firefox"
+		   }
+	   },
+            
+
+
+        "custom/notification": {
+            "tooltip": false,
+            "format": "",
+            "on-click": "swaync-client -t -sw",
+            "escape": true
+        },
+        "clock": {
+            "format": "{:%A, %B %d | %H:%M} ",
+            "interval": 1,   
+            "tooltip-format": "<span><big>{calendar}</big></span>",
+            "calendar": {
+		"mode": "month",
+		"mode-mon-col": 3,
+		"weeks-pos": "right",
+                "format": {
+			"today": "<span color='#890c57'><b><u>{}</u></b></span>",
+			"months": "<span color='#6BBF91'><b>{}</b></span>",
+			"weekdays": "<span color='#C375AB'><u>{}</u></span>",
+			"days": "<span color='#C2C4C6'>{}</span>",
+			"weeks": "<span color='#2EA7AA'><b>├w{}</b></span>"
+                }
+            },
+	    "actions": {
+		    "on-click": "mode"
+	    }
+        },
+        "network": {
+            "format-wifi": " ",
+            "format-ethernet":" ",
+            "format-disconnected": " ",
+            "tooltip-format-disconnected": "Disconnected",
+            "tooltip-format-wifi": "{essid} ({signaldBm}dBm)\n{ipaddr}\nDownload: {bandwidthDownBytes}\nUpload: {bandwidthUpBytes}",
+	    "tooltip-format-ethernet": "{ifname} 🖧 ",
+            "on-click": "kitty nmtui"
+        },
+        "bluetooth": {
+            "format-on": "󰂯",
+            "format-off": "BT-off",
+            "format-disabled": "󰂲",
+            "format-connected-battery": "{device_battery_percentage}% 󰂯",
+            "format-alt": "{device_alias} 󰂯",
+            "tooltip-format": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+            "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected\n\n{device_enumerate}",
+            "tooltip-format-enumerate-connected": "{device_alias}\n{device_address}",
+            "tooltip-format-enumerate-connected-battery": "{device_alias}\n{device_address}\n{device_battery_percentage}%",
+            "on-click-right": "blueman-manager"
+        }, 
+        "battery": {
+            "interval":30,
+            "states": {
+                "good": 95,
+                "warning": 20,
+                "critical": 10
+            },
+            "format": "{icon} {capacity}%",
+            "format-charging": "{capacity}% 󰂄",
+            "format-plugged": "{capacity}% 󰂄 ",
+            "format-alt": "{time} {icon}",
+            "format-icons": [
+                "󰁻",
+            "󰁼",
+            "󰁾",
+            "󰂀",
+            "󰂂",
+            "󰁹"
+            ]
+        },
+        "custom/expand": {
+            "format": "",
+            "tooltip": false
+        },
+        "custom/endpoint":{
+            "format": "|",
+            "tooltip": false
+        },
+        "group/expand": {
+            "orientation": "horizontal",
+            "drawer": {
+                "transition-duration": 600,
+                "transition-to-left": true,
+                "click-to-reveal": true
+            },
+            "modules": ["custom/expand", "tray","custom/endpoint"]
+        },
+	"group/audio": {
+		"orientation": "horizontal",
+                "modules": [
+                        "pulseaudio",
+                        "pulseaudio#microphone"
+                ]
+        },
+        "pulseaudio": {
+                "format": "{icon} {volume}%",
+                "format-muted": "󰖁",
+                "format-icons": {
+                        "default": ["", "", "󰕾", ""]
+                }
+	},
+	"pulseaudio#microphone":{
+		"format": "{format_source}",
+		"format-source": "",
+		"format-source-muted": ""
+                },
+	"group/networking": {
+		"orientation": "horizontal",
+		"modules": [
+			"network",
+			"bluetooth",
+			"battery"
+		]
+	}
+ 
+}
