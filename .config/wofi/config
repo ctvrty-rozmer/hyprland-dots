@@ -1,0 +1,12 @@
+[config]
+allow_images=true
+width=400
+show=drun
+prompt=What adventure awaits us today?
+height=300
+term=kitty
+hide_scroll=true
+print_command=true
+insensitive=true
+columns=1
+no_actions=true
