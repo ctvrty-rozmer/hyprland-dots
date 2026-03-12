@@ -1,0 +1,43 @@
+
+
+/* $specialDark   rgba(23,10,36,0.8)
+#$specialLight   rgba(253,120,210,1)
+#
+#$special1   rgba(59,30,64,1)
+#$special2   rgba(56,38,105,1)
+#$special3   rgba(215,45,131,1)
+#$special4   rgba(142,31,80,1)
+#$special5   rgba(150,71,183,1)
+#$special6   rgba(100,47,117,1)
+#$special7   rgba(229,170,201,1)
+#$special8   rgba(223,62,107,1)
+*/
+/*
+@define-color specialLight   rgba(179, 199, 122, 1);
+@define-color specialDark   rgba(7, 17, 27, 1);
+
+@define-color special1   rgba(1, 25, 42, 1);
+@define-color special2   rgba(39, 99, 100, 1);
+@define-color special3   rgba(8, 110, 150, 1);
+@define-color special4   rgba(35, 142, 166, 1);
+@define-color special5   rgba(7, 17, 27, 1);
+@define-color special6   rgba(137, 12, 87, 1);
+@define-color special7   rgba(8, 57, 103, 1);
+@define-color special8   rgba(70, 170, 125, 1);
+@define-color special9   rgba(212, 92, 83, 1);
+@define-color special10   rgba(108, 36, 170, 1);
+*/
+
+@define-color specialDark rgba(2, 2, 18,1);
+@define-color specialLight rgba(255, 220, 149, 1);
+
+@define-color special1   rgba(2, 52, 162, 1);
+@define-color special2   rgba(163, 19, 120, 1);
+@define-color special3   rgba(10, 33, 62, 1);
+@define-color special4   rgba(198, 149, 13, 1);
+@define-color special5   rgba(59, 22, 139, 1);
+@define-color special6   rgba(83, 202, 182, 1);
+@define-color special7   rgba(4, 5, 39, 1);
+@define-color special8   rgba(49, 165, 109, 1);
+@define-color special9   rgba(2, 214, 242, 1);
+@define-color special10  rgba(237, 69, 94, 1);
