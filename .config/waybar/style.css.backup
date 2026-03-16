@@ -1,0 +1,330 @@
+@import url('../../.cache/wal/colors-waybar.css');
+@import url('../../.config/handpickedcolors.css');
+@import url('../../.config/handpickedcolors2.css');
+
+/* DEFAULTS ============ */
+* {
+    font-size: 9px;
+    font-family: "BitstromWera Nerd Font", 'Font Awesome 7 Free-Regular';
+}
+
+window#waybar {
+    background: @specialDark;
+    border-style: double;
+    border-width: 1px;
+    border-color: alpha(@special1, .69);
+    border-radius: 3px;
+}
+
+/* default module settings------ */
+.modules-left {
+    margin: 4px 0px;
+    padding: 0px 4px;
+}
+
+.modules-center {
+    margin: 4px 0px;
+    padding: 0px 4px;
+
+}
+
+.modules-right {
+    margin: 4px 0px;
+    padding: 0px 4px;
+}
+
+/* default text color ----- */
+#audio,
+#networking,
+#clock,
+#custom-notification,
+#group-expand,
+#tray,
+#custom-expand,
+#custom-endpoint,
+#workspaces,
+#workspaces button {
+    color: @special6;
+}
+
+/* default background settings EXCEPT WORKSPACES ----- */
+#audio,
+#networking,
+#custom-notification,
+#group-expand,
+#tray,
+#custom-expand,
+#custom-endpoint,
+#clock {
+    background: alpha(@special11, .55);
+
+}
+
+/* default border settings except tray----- */
+#audio,
+#networking,
+#clock,
+#custom-notification,
+#workspaces {
+    border-style: double;
+    border-width: 1.5px;
+    border-color: alpha(@special1, .69);
+    border-radius: 2px;
+
+}
+
+/* default padding/margin ------ */
+#audio,
+#networking,
+#group-expand,
+#custom-expand,
+#tray,
+#custom-notification,
+#workspaces,
+#clock {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* default hover settings EXCEPT WORKSPACES CUSTOM NOTIF CLOCK AND EXPAND/TRAY-----*/
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#microphone:hover {
+    background-color: alpha(@special4, .69);
+    color: @specialDark;
+    font-weight: 700;
+    margin: 2px 2px;
+    border-radius: 2px;
+}
+
+#audio,
+#audio:hover,
+#networking,
+#networking:hover,
+#pulseaudio,
+#pulseaudio:hover,
+#bluetooth,
+#bluetooth:hover,
+#network,
+#network:hover,
+#battery,
+#battery:hover,
+#microphone,
+#microphone:hover,
+#custom-notification,
+#custom-notification:hover {
+
+    transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* default tooltip settings-----*/
+tooltip {
+    background-color: alpha(@specialDark, .95);
+    border-radius: 2px;
+    border-style: double;
+    border-color: alpha(@special1, .69);
+    border-width: 1.5px;
+}
+
+/* WORKSPACE SETTINGS ====== */
+#workspaces {
+    background: alpha(@special11, .55);
+}
+
+#workspaces button,
+#workspaces button.empty {
+    all: unset;
+    padding-left: 7px;
+    padding-right: 7px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-radius: 2px;
+    margin: 2px 2px;
+    font-weight: 400;
+}
+
+#workspaces button.active,
+#workspaces button.empty.active,
+#workspaces button:hover,
+#workspaces button.empty:hover {
+    background-color: alpha(@special4, .69);
+    color: @specialDark;
+    font-weight: 700;
+}
+
+#workspaces button.empty {
+    color: alpha(@special6, .40);
+}
+
+/* transition settings------ */
+#workspaces,
+#workspaces button,
+#workspaces button:hover,
+#workspaces button.active,
+#workspaces button.empty,
+#workspaces button.empty:hover,
+#workspaces button empty.active {
+
+    transition: background-color .7s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+
+}
+
+
+/* ====== CLOCK SETTINGS ====== */
+/* #clock{ */
+
+/* } */
+#clock:hover {
+    color: alpha(@foreground, .9);
+    text-shadow:
+        0 0 1px alpha(@vivid6, 1),
+        0 0 2px alpha(@neonLight, 1),
+        1 1 2px alpha(@vividLight, .5),
+        -1 -1 3px alpha(@neon8, 1),
+        0 0 5px alpha(@neon8, 1),
+        2 2 5px alpha(@vivid9, .4),
+        -2 -2 5px alpha(@vivid9, .4),
+        0 0 8px alpha(@vivid8, 1),
+        0 0 11px alpha(@vivid6, 1),
+        0 0 14px alpha(@vivid6, 1),
+        0 0 14px alpha(@neon8, 1);
+
+    transition: text-shadow .5s cubic-bezier(.60, -.41, .88, 1.78), color 2s ease-out;
+}
+
+/* ====== EXPAND BUTTON SETTINGS ====== */
+#group-expand {
+    transition: all .3s ease;
+}
+
+#custom-expand {
+    background: transparent;
+    color: alpha(@special6, 1);
+    transition: all .3s ease;
+}
+
+#custom-endpoint {
+    color: alpha(@specialLight, .6);
+    background: transparent;
+    text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
+
+}
+
+#custom-expand:hover {
+    color: alpha(@specialLight, 1);
+    text-shadow: 0 0 2px alpha(@color8, 1), 0 0 4px alpha(@color11, 1), 0 0 6px alpha(@color14, 1);
+
+}
+
+/* ====== TRAY SETTINGS ====== */
+#tray {
+    transition: all .3s ease;
+    border-radius: 2px;
+    border-style: double;
+    border-width: .5px;
+    border-color: alpha(@special1, .69);
+}
+
+#tray menu * {
+    transition: all .3s ease;
+}
+
+#tray menu separator {
+    transition: all .3s ease;
+}
+
+/* ====== AUDIO IN/OUT SETTINGS ====== */
+
+/* -----audio group settings----- */
+/* #audio { */
+
+
+/* } */
+/* -----audio out settings----- */
+#pulseaudio {
+    padding: 0px 7px;
+    margin: 2px 2px;
+}
+
+/* -----audio in settings----- */
+#microphone.muted {
+    padding: 0px 5px;
+    margin: 2px 2px;
+}
+
+
+
+
+
+/* ====== NETWORKING AND HARDWARE MODULES ====== */
+
+/* -----networking group settings----- */
+/* #networking { */
+/* margin: 0px 2px; */
+/* border-radius: 2px; */
+/* border-style: double; */
+/* border-width: 1.5px; */
+/* border-color: alpha(@special1,.69); */
+/* } */
+
+/* -----network settings----- */
+#network {
+    padding: 0px 7px;
+    margin: 2px 2px;
+
+}
+
+/* -----bluetooth settings----- */
+#bluetooth {
+    padding: 0px 8px;
+    margin: 2px 2px;
+}
+
+/* -----battery settings----- */
+#battery {
+    padding: 0px 7px;
+    margin: 2px 2px;
+}
+
+#battery.charging {
+    color: #26A65B;
+}
+
+#battery.warning:not(.charging) {
+    color: #ffbe61;
+}
+
+#battery.critical:not(.charging) {
+    color: #f53c3c;
+    animation-name: blink;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+
+/* ====== NOTIFICATION SETTINGS ====== */
+#custom-notification {
+    margin: 0px 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: 8px;
+    padding-right: 11px;
+    border-radius: 2px;
+    border-style: double;
+    border-width: 1.5px;
+    border-color: alpha(@special1, .69);
+}
+
+#custom-notification:hover {
+    color: @color8;
+    font-weight: 700;
+}

@@ -1,0 +1,139 @@
+@import url('../../.cache/wal/colors-waybar.css');
+@import url('../../.config/handpickedcolors.css');
+@import url('../../.config/handpickedcolors2.css');
+
+/* DEFAULTS ============ */
+* {
+    font-size: 9px;
+    font-family: "BitstromWeraNerdFontPropo";
+}
+
+window#waybar {
+    background: @specialDark;
+    border-style: double;
+    border-width: 1px;
+    border-color: alpha(@special1, .69);
+    border-radius: 3px;
+}
+
+/* MODULE SETTINGS ====== */
+.modules-left {
+    margin: 4px 0px;
+    padding: 0px 4px;
+}
+
+.modules-center {
+    margin: 4px 0px;
+    padding: 0px 4px;
+
+}
+
+.modules-right {
+    margin: 4px 0px;
+    padding: 0px 4px;
+}
+
+/* TEXT COLOR ====== */
+#hardware,
+#networking,
+#clock,
+#custom-notification,
+#group-expand,
+#tray,
+#custom-expand,
+#custom-endpoint,
+#workspaces,
+#workspaces button {
+    color: @special6;
+}
+
+/* BACKGROUND SETTINGS ====== */
+#hardware,
+#networking,
+#custom-notification,
+#group-expand,
+#tray,
+#custom-expand,
+#custom-endpoint,
+#clock,
+#workspaces {
+    background: alpha(@special11, .55);
+
+}
+
+/* BORDER SETTINGS except tray ====== */
+#hardware,
+#networking,
+#clock,
+#custom-notification,
+#workspaces {
+    border-style: double;
+    border-width: 1.5px;
+    border-color: alpha(@special1, .69);
+    border-radius: 2px;
+
+}
+
+/* PADDING AND MARGIN ====== */
+#hardware,
+#networking,
+#group-expand,
+#custom-expand,
+#tray,
+#custom-notification,
+#workspaces,
+#clock {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-right: 4px;
+    padding-left: 4px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* HOVER SETTINGS for pulseaudio, bluetooth, network, battery, and microphone -----*/
+#pulseaudio:hover,
+#bluetooth:hover,
+#network:hover,
+#battery:hover,
+#microphone:hover {
+    background-color: alpha(@special4, .69);
+    color: @specialDark;
+    font-weight: 700;
+    border-radius: 2px;
+}
+
+/* HOVER TRANSITION SETTINGS for all modules except tray and clock ----- */
+#hardware,
+#hardware:hover,
+#networking,
+#networking:hover,
+#pulseaudio,
+#pulseaudio:hover,
+#bluetooth,
+#bluetooth:hover,
+#network,
+#network:hover,
+#battery,
+#battery:hover,
+#microphone,
+#microphone:hover,
+#custom-notification,
+#custom-notification:hover,
+#workspaces button:hover,
+#workspaces button.empty:hover {
+
+    transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+    
+}
+
+/* default tooltip settings-----*/
+tooltip {
+    background-color: alpha(@specialDark, .95);
+    border-radius: 2px;
+    border-style: double;
+    border-color: alpha(@special1, .69);
+    border-width: 1.5px;
+}

@@ -25,26 +25,35 @@ version = "1.2.0"
 # client_dup_fullscreen = "[{icon}]{delim}{icon}{counter_unfocused}"
 # client_dup_active = "*{icon}*{delim}{icon}{counter_unfocused}"
 [format]
-delim = "   "
+delim = ""
 dedup = true
-dedup_inactive_fullscreen = true
-workspace = "{name}{clients}"
-client_dup_active = "{client}{delim}{counter_sup}"
-workspace_empty = "{id}"
-client_active = "{icon}"
+dedup_inactive_fullscreen = false
+workspace = "{clients}{delim}"
+client = "{icon}" 
+client_dup = ""
 max_clients = 1
+
+
+
+
+
 [class]
+
 # Add your icons mapping
 # use double quote the key and the value
 # take class name from 'hyprctl clients'
-"DEFAULT" = ""
-"(?i)kitty" = ""
+#"(?i)kitty" = "{id}  "
+"DEFAULT" = "{id}"
 "(?i)discord" = ""
 "(?i)spotify" = ""
 
 
 [class_active]
-#DEFAULT = "{title}"
+
+"DEFAULT" = "{id}"
+#"(?i)kitty" = "{id}  "
+"(?i)discord" = "{id} "
+"(?i)spotify" = "{id} "
 #"(?i)firefox" = ""
 #"(?i)kitty" = ""
 #"(?i)spotify" = ""
@@ -57,8 +66,11 @@ max_clients = 1
 # [initial_class_active]
 # "(?i)Kitty" = "*TERM*"
 
-[title_in_class."(?i)kitty"]
-"(?i)neomutt" = "neomutt"
+#[title_in_class."(?i)kitty"]
+#"(?i)neomutt" = "neomutt"
+
+#"(?i)~" = "{id}  "
+#"(?i)vim" = "{id}  "
 # regex captures support is supported
 # "emerge: (.+?/.+?)-.*" = "{match1}"
 
@@ -89,17 +101,15 @@ max_clients = 1
 aProgram = "^$" # will match null title for aProgram
 "[Ss]team" = "^(Friends List.*)?$" # will match Steam friends list plus all popups (empty titles)
 "(?i)wofi" = ".*"
-
-
 [workspaces_name]
-0 = ""
-1 = ""
-2 = ""
-3 = ""
-4 = ""
-5 = ""
-6 = ""
-7 = ""
-8 = ""
-9 = ""
-10 = ""
+0 = "0"
+1 = "1"
+2 = "2"
+3 = "3"
+4 = "4"
+5 = "5"
+6 = "6"
+7 = "7"
+8 = "8"
+9 = "9"
+10 = "10"
