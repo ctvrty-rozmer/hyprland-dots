@@ -27,7 +27,7 @@
 @define-color special9   rgba(212, 92, 83, 1);
 @define-color special10   rgba(108, 36, 170, 1);
 */
-
+/*
 @define-color specialDark rgba(2, 2, 18,1);
 @define-color specialLight rgba(255, 220, 149, 1);
 
@@ -41,3 +41,18 @@
 @define-color special8   rgba(49, 165, 109, 1);
 @define-color special9   rgba(2, 214, 242, 1);
 @define-color special10  rgba(237, 69, 94, 1);
+*/
+@define-color specialDark rgba(5,5,5,1);
+@define-color specialLight rgba(240,240,240,1);
+
+@define-color special1 rgba(66,66,66,1);
+@define-color special2 rgba(31,31,31,1);
+@define-color special3 rgba(71,71,71,1);
+@define-color special4 rgba(214,214,214,1);
+@define-color special5 rgba(143,143,143,1);
+@define-color special6 rgba(225,225,225,1);
+@define-color special7 rgba(173,173,173,1);
+@define-color special8 rgba(102,102,102,1);
+@define-color special9 rgba(133,133,133,1);
+@define-color special10 rgba(201,201,201,1);
+@define-color special11 rgba(24,24,24,1);

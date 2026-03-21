@@ -1,9 +1,6 @@
 @import url('/home/ctvrty/.cache/wal/colors-waybar.css');
+@import url('/home/ctvrty/.config/handpickedcolors.css');
 
-@define-color mauve  @color13;
-@define-color red  @color3;
-@define-color lavender  @color13;
-@define-color text  @color7;
 @keyframes fadeIn {
     0% {
     }
@@ -19,13 +16,15 @@
     border: none;
     text-shadow:none;
     background-color:transparent;
+    color: @specialLight;
+    
 }
 
 window {
     all:unset;
     padding: 2px;
     border-radius: 0px;
-    background-color: alpha(@background,.5);
+    background-color: @specialDark;
     outline: none;
 }
 #inner-box {
@@ -48,16 +47,18 @@ window {
     margin-right:10px;
     margin-top:10px;
     padding: 10px;
-    border: none;
+    border-style: double;
+    border-color: alpha(@special1,.85);
+    border-width: 2px;
     outline: none;
-    color: @text;
+    color: alpha(@specialLight,.69);
     box-shadow: 1px 1px 5px rgba(0,0,0, .5);
-    border-radius:5;
-    background-color: alpha(@background,.2);
+    border-radius:4;
+    background-color: @background;
 }
 #input image {
     border: none;
-    color: @red;
+    color: @color1;
     padding-right:5px;
 }
 #input * {
@@ -69,39 +70,43 @@ window {
     outline: none;
     border: none;
 
-    border-radius:5;
+    border-radius:4;
 }
 #text {
     margin: 5px;
     border: none;
-    color: @text;
+    color: @color4;
     outline: none;
 }
 #text {
     margin: 5px;
     border: none;
-    color: @text;
+    color: @color4;
     outline: none;
 }
 #entry {
-    border: none;
+    border-style: double;
+    border-color: alpha(@color2,.3);
+    border-width: 1px;
+    border-radius: 4px;
     margin: 5px;
-    padding: 10px;
+    padding: 6px;
 }
 #entry arrow {
     border: none;
-    color: @lavender;
+    color: @color1;
 
 }
 #entry:selected {
-    box-shadow: 1px 1px 5px rgba(255,255,255, .03);
-    border: none;
-    border-radius: 20px;
-    background-color:transparent;
+    border-style: double;
+    border-color: alpha(@special1,.69);
+    border-width: 2px;
+    border-radius: 4px;
+    background-color: alpha(@special1,.15);
 }
 #entry:selected #text {
-    color: @mauve;
+    color: alpha(@specialLight,.69);
 }
 #entry:drop(active) {
-    background-color: @lavender !important;
+    background-color: @color8 !important;
 }

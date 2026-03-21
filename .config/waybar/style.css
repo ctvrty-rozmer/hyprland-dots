@@ -51,11 +51,11 @@
 }
 
 /* ====== EXPAND BUTTON SETTINGS ====== */
-#group-expand {
+#group-expand, #group-leftdrawer {
     transition: all .3s ease;
 }
 
-#custom-expand {
+#custom-expand, #custom-expand-right {
     background: transparent;
     color: alpha(@special6, 1);
     transition: all .3s ease;
@@ -68,7 +68,7 @@
 
 }
 
-#custom-expand:hover {
+#custom-expand:hover, #custom-expand-right:hover {
     color: alpha(@specialLight, 1);
     text-shadow: 0 0 2px alpha(@color8, 1), 0 0 4px alpha(@color11, 1), 0 0 5px alpha(@color14, 1);
 
@@ -152,4 +152,39 @@
 #custom-notification:hover {
     color: @color8;
     font-weight: 700;
+}
+
+#cava {
+
+    letter-spacing: -2px;
+    font-weight: 700;
+    padding: 0px 7px;
+}
+#mpris {
+    color: @special6;
+    padding: 0px 7px;
+    font-weight: 700;
+}
+
+#musicplayer {
+    background: alpha(@special11, .55);
+    padding: 0px 7px;
+    color: @special6;
+    margin: 0px 2px;
+    border-radius: 2px;
+    border-style: double;
+    border-width: 1.5px;
+    border-color: alpha(@special1, .69);
+}
+
+#custom-weather {
+    background: alpha(@special11, .55);
+    padding: 0px 7px;
+    color: @special6;
+    margin: 0px 2px;
+    font-weight: 700;
+    border-radius: 2px;
+    border-style: double;
+    border-width: .5px;
+    border-color: alpha(@special1, .69);
 }

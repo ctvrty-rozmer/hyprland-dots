@@ -1,6 +1,6 @@
 [config]
 allow_images=true
-width=400
+width=350
 show=drun
 prompt=What adventure awaits us today?
 height=300
@@ -10,3 +10,4 @@ print_command=true
 insensitive=true
 columns=1
 no_actions=true
+

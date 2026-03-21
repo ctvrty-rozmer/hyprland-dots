@@ -5,7 +5,7 @@
 /* DEFAULTS ============ */
 * {
     font-size: 9px;
-    font-family: "BitstromWeraNerdFontPropo";
+    font-family: "BitstromWeraNerdFontPropo", "Adwaita Mono";
 }
 
 window#waybar {
@@ -39,8 +39,11 @@ window#waybar {
 #clock,
 #custom-notification,
 #group-expand,
+#group-leftdrawer,
+#group-musicplayer,
 #tray,
 #custom-expand,
+#custom-expand-right,
 #custom-endpoint,
 #workspaces,
 #workspaces button {
@@ -51,7 +54,10 @@ window#waybar {
 #hardware,
 #networking,
 #custom-notification,
+#group-musicplayer,
 #group-expand,
+#group-leftdrawer,
+#custom-expand-right,
 #tray,
 #custom-expand,
 #custom-endpoint,
@@ -66,6 +72,7 @@ window#waybar {
 #networking,
 #clock,
 #custom-notification,
+#group-musicplayer,
 #workspaces {
     border-style: double;
     border-width: 1.5px;
@@ -78,6 +85,8 @@ window#waybar {
 #hardware,
 #networking,
 #group-expand,
+#custom-expand-right,
+#group-leftdrawer,
 #custom-expand,
 #tray,
 #custom-notification,

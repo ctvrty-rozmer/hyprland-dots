@@ -1,6 +1,7 @@
 @import url('../../.cache/wal/colors-waybar.css');
-@import url(central_control.css);
 @import url(../../handpickedcolors.css);
+@import url(central_control.css);
+
 * {
 
   /*background-alt:        @color1;      Buttons background */
@@ -72,13 +73,7 @@
 }
 
 .image {
-  border-radius: 2px;
-  margin: 8px;
-  padding: 0px;
-}
-.app-icon {
-  -gtk-icon-size: 0px;
-  opacity: 0;
+  margin: 10px 20px 10px 0px;
 }
 
 .summary {
