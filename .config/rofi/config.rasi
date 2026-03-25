@@ -1,0 +1,119 @@
+configuration {
+    modes: [ drun ];
+    font: "BitstromWeraNerdFontPropo 10";
+    show-icons: false;
+
+    display-drun: " ";
+    display-window: "";
+    display-ssh: "";
+
+    drun-display-format: "{name}";
+    location: 0;
+
+    scroll-method: 0;
+    sidebar-mode: false;
+    hover-select: false;
+    cycle: false;
+
+    //keybinds
+    kb-cancel: "Escape";
+    kb-copy: "Control+c";
+    kp-clear-line: "Control+w";
+}
+
+@theme "~/.config/rofi/colors.rasi"
+                                                                                              
+* {                                                                                
+    bg: @specialDark;
+    fg: @specialLight;
+                                                                                              
+    text-color: @specialLight;
+    background-color: @special12;
+    button: @special3;
+}
+
+window {
+    width:            300px;
+    height:           350px;
+    background-color: @bg;
+    border:           1px;
+    border-color:     @special1;
+    border-radius:    2px;
+    padding:          0;
+}
+mainbox {
+    background-color: transparent;
+    children:         [ inputbar, message, listview ];
+    padding:          12px;
+}
+
+inputbar {
+    background-color: @special21;
+    border-radius:    2px;
+    padding:          10px 14px;
+    margin:           0 0 10px 0;
+    children:         [ prompt, entry ];
+    spacing:          6px;
+}
+
+prompt {
+    background-color: transparent;
+    text-color:       @special5;
+}
+
+entry {
+    background-color: transparent;
+    text-color:       @fg;
+    placeholder:      "What adventure awaits us?";
+    placeholder-color: @special9;
+    cursor:           text;
+}
+
+listview {
+    background-color: transparent;
+    columns:          1;
+    lines:            6;
+    scrollbar:        true;
+    spacing:          2px;
+    fixed-height:     false;
+}
+
+scrollbar {
+    element: false;
+    width:            0px;
+    handle-width:     0px;
+    background-color: @bg;
+    handle-color:     @special10;
+    border-radius:    2px;
+}
+
+element {
+    background-color: transparent;
+    text-color:       @special8;
+    border-radius:    2px;
+    spacing:          8px;
+    padding:          10px 14px;
+    orientation:      horizontal;
+    cursor:           pointer;
+}
+
+element selected {
+    background-color: @special21;
+    text-color:       @special7;
+    border:           0 0px 2px 0px;
+    border-color:     @special2;
+}
+
+
+element-icon {
+    background-color: transparent;
+    size:             24px;
+    cursor:           inherit;
+}
+
+element-text {
+    background-color: transparent;
+    text-color:       inherit;
+    cursor:           inherit;
+    vertical-align:   0.5;
+}

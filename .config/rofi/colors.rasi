@@ -1,0 +1,93 @@
+/* Color definitions */
+* {
+    specialDark:  rgba(5,5,5,1);
+    specialLight: rgba(240,240,240,1);
+    special11: rgba(24,24,24,1);
+    special2:  rgba(31,31,31,1);
+    special1:  rgba(66,66,66,1);
+    special3:  rgba(71,71,71,1);
+    special8:  rgba(102,102,102,1);
+    special9:  rgba(133,133,133,1);
+    special5:  rgba(143,143,143,1);
+    special7:  rgba(173,173,173,1);
+    special10: rgba(201,201,201,1);
+    special4:  rgba(214,214,214,1);
+    special6:  rgba(225,225,225,1);
+                                                                                              
+    special12: rgb(18,18,18);
+    special13: rgb(39,39,39);
+    special14: rgb(52,52,52);
+    special15: rgb(79,79,79);
+    special16: rgb(92,92,92);
+    special17: rgb(119,119,119);
+    special18: rgb(159,159,159);
+    special19: rgb(185,185,185);
+    special20: rgb(240,240,240);
+    special21: rgb(15,15,15);
+    specialbg: rgb(10,10,10);
+                                                                                              
+    bg: @specialDark;
+    fg: @specialLight;
+                                                                                              
+    text-color: @specialLight;
+    background-color: @special12;
+    button: @special3;
+
+    background: @special2;
+    foreground: @special6;
+    accent:     @special4;
+}
+
+/* Main window */
+window {
+    background-color: @background;
+    border: 2px;
+    border-color: @special1;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Input bar */
+inputbar {
+    background-color: @special11;
+    text-color: @foreground;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Prompt text */
+prompt {
+    text-color: @accent;
+}
+
+/* Entry list */
+listview {
+    background-color: transparent;
+    spacing: 6px;
+    margin: 10px 0 0 0;
+}
+
+/* Individual entries */
+element {
+    background-color: @special3;
+    text-color: @foreground;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+/* Selected entry */
+element selected {
+    background-color: @accent;
+    text-color: @specialDark;
+}
+
+/* Urgent / active states */
+element urgent {
+    background-color: @special8;
+    text-color: @specialLight;
+}
+
+element active {
+    background-color: @special1;
+    text-color: @foreground;
+}
