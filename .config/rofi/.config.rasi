@@ -1,0 +1,222 @@
+configuration {
+    modes: [ drun ];
+//    combi-modes: [ window, drun, run ];
+    font: "BitstromWeraNerdFontPropo 10";
+    show-icons: false;
+
+    display-drun: "";
+    display-window: "";
+    display-ssh: "";
+
+    drun-display-format: "{name}";
+    location: 0;
+
+    scroll-method: 1;
+    sidebar-mode: false;
+    hover-select: false;
+
+
+    //keybinds
+    kb-cancel: "Escape";
+    kb-copy: "Control+c";
+    kp-clear-line: "Control+w";
+}
+
+@theme "~/.config/rofi/colors.rasi"
+                                                                                              
+* {
+    specialDark:  rgba(5,5,5,1);
+    specialLight: rgba(240,240,240,1);
+    special11: rgba(24,24,24,1);
+    special2:  rgba(31,31,31,1);
+    special1:  rgba(66,66,66,1);
+    special3:  rgba(71,71,71,1);
+    special8:  rgba(102,102,102,1);
+    special9:  rgba(133,133,133,1);
+    special5:  rgba(143,143,143,1);
+    special7:  rgba(173,173,173,1);
+    special10: rgba(201,201,201,1);
+    special4:  rgba(214,214,214,1);
+    special6:  rgba(225,225,225,1);
+                                                                                              
+    special12: rgb(18,18,18);
+    special13: rgb(39,39,39);
+    special14: rgb(52,52,52);
+    special15: rgb(79,79,79);
+    special16: rgb(92,92,92);
+    special17: rgb(119,119,119);
+    special18: rgb(159,159,159);
+    special19: rgb(185,185,185);
+    special20: rgb(240,240,240);
+    specialbg: rgb(10,10,10);
+                                                                                              
+    bg: @specialDark;
+    fg: @specialLight;
+                                                                                              
+    text-color: @specialLight;
+    background-color: @special12;
+    button: @special3;
+}                                                                                             
+         
+
+window {
+    width: 25%;
+    height: 40%;
+    x-offset: 0px;
+    y-offset: 0px;
+    location: center;
+   
+    padding: 0px;
+    margin: 0px;
+
+    border: 2px;
+    border-radius: 2px;
+    border-color: @special6;
+    
+    background-color: @bg;
+
+
+}
+
+mainbox {
+    enabled: true;
+    spacing: 10px;
+    margin: 0px;
+    padding: 0 6px;
+    border: 1px;
+    border-radius: 2px;
+    border-color: @special11;
+    background-color: @bg;
+    children: [ "inputbar", "message", "listview" ];
+}
+
+inputbar {
+    enabled: true;
+    spacing: 0px;
+    margin: 12px 0px;
+    padding: 0px;
+    background-color: transparent;
+    text-color: @foreground;
+    height: 1px;
+    orientation: vertical;
+    children: ["textbox-prompt-colon", "entry"];
+
+}
+
+prompt {
+    enabled: true;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+textbox-prompt-colon {
+    enabled: true;
+    padding: 0px;
+    expand: false;
+    str: "drun :";
+    background-color: inherit;
+    text-color: @fg;
+}
+
+entry {
+    enabled: true;
+    expand: true;
+    padding: 0px;
+    background-color: inherit;
+    margin: 10px 0px 0px 0px;
+    text-color: inherit;
+    cursor: text;
+    placeholder: "What adventure awaits us?";
+    placeholder-color: @fg;
+}
+num-filtered-rows {
+    enabled: true;
+    expand: false;
+    background-color: inherit;
+    text-color: inherit;
+    padding: 0px;
+    margin: 0px;
+}
+
+textbox-num-sep {
+    enabled: true;
+    expand: false;
+    str: "/";
+    background-color: inherit;
+    text-color: inherit;
+    margin: 0px;
+    padding: 0px;
+}
+
+num-rows {
+    enabled: true;
+    expand: false;
+    background-color: inherit;
+    text-color: @fg;
+}
+
+case-indicator {
+    enabled: false;
+    background-color: inherit;
+    text-color: inherit;
+}
+
+
+listview {
+    enabled: true;
+    columns: 1;
+    lines: 8;
+    cycle: false;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+
+
+    spacing: 7px;
+    margin: 0px 2px;
+    padding: 0px 6px;
+    border: 0px;
+    border-color: @bg;
+    border-radius: 2px;
+    background-color: transparent; 
+    text-color: @fg;
+    cursor: "default";
+
+}
+scrollbar {
+    handle-width: 5px;
+    handle-color: @fg;
+    border-radius: 2px;
+    background-color: @bg;
+}
+
+element {
+    enabled: true;
+    spacing: 0px;
+    padding: 6px;
+    margin: 1px;
+    border-radius: 2px;
+    background-color: transparent;
+    text-color: @fg;
+    cursor: pointer;
+}
+
+element selected {
+    text-color: @special4;
+    background-color: @special11;
+    cursor: inherit;
+
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    highlight: inherit;
+    cursor: inherit;
+    vertical-align: 0.5;
+    horizontal-align: 0.0;
+}
+
