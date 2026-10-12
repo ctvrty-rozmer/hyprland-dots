@@ -6,34 +6,38 @@
 * {
     font-size: 9px;
     font-family: "BitstromWeraNerdFontPropo", "Adwaita Mono";
+    font-weight: 300;
 }
 
 window#waybar {
-    background: @specialDark;
-    border-style: double;
-    border-width: 1px;
-    border-color: alpha(@special1, .69);
-    border-radius: 3px;
+    background: transparent;
+    color: @color15;
+    border: none;
+    border-radius: 12px;
 }
 
 /* MODULE SETTINGS ====== */
 .modules-left {
-    margin: 4px 0px;
-    padding: 0px 4px;
+    margin: 0px 6px;
+    padding: 5px 6px;
+    border-radius: 20px;
 }
 
 .modules-center {
-    margin: 4px 0px;
-    padding: 0px 4px;
+    border-radius: 20px;
+    margin: 0px 6px;
+    padding: 5px 6px;
 
 }
 
 .modules-right {
-    margin: 4px 0px;
-    padding: 0px 4px;
+    border-radius: 20px;
+    padding: 5px 6px;
+    margin: 0px 6px;
 }
 
 /* TEXT COLOR ====== */
+#custom-border,
 #hardware,
 #networking,
 #clock,
@@ -45,12 +49,14 @@ window#waybar {
 #custom-expand,
 #custom-expand-right,
 #custom-endpoint,
-#workspaces,
+#musicplayer,
+#mpris,
 #workspaces button {
-    color: @special6;
+    color: @color15;
 }
 
 /* BACKGROUND SETTINGS ====== */
+#custom-border,
 #hardware,
 #networking,
 #custom-notification,
@@ -58,28 +64,25 @@ window#waybar {
 #group-expand,
 #group-leftdrawer,
 #custom-expand-right,
-#tray,
 #custom-expand,
 #custom-endpoint,
 #clock,
+#musicplayer,
 #workspaces {
-    background: alpha(@special11, .55);
+    background: @color4;
 
 }
 
-/* BORDER SETTINGS except tray ====== */
+/* BORDER SETTINGS except tray ====== 
 #hardware,
 #networking,
 #clock,
 #custom-notification,
 #group-musicplayer,
 #workspaces {
-    border-style: double;
-    border-width: 1.5px;
-    border-color: alpha(@special1, .69);
-    border-radius: 2px;
 
 }
+*/
 
 /* PADDING AND MARGIN ====== */
 #hardware,
@@ -92,26 +95,21 @@ window#waybar {
 #custom-notification,
 #workspaces,
 #clock {
-    padding-top: 1px;
-    padding-bottom: 1px;
-    padding-right: 4px;
-    padding-left: 4px;
-    margin-top: 0px;
-    margin-bottom: 0px;
-    margin-left: 2px;
-    margin-right: 2px;
+    border-radius: 20px;
+    padding: 0px 6px;
+    margin: 0px 5px;
 }
 
-/* HOVER SETTINGS for pulseaudio, bluetooth, network, battery, and microphone -----*/
+/* HOVER SETTINGS for clock, pulseaudio, bluetooth, network, battery, and microphone -----*/
+#clock:hover,
 #pulseaudio:hover,
 #bluetooth:hover,
 #network:hover,
 #battery:hover,
 #microphone:hover {
-    background-color: alpha(@special4, .69);
-    color: @specialDark;
-    font-weight: 700;
-    border-radius: 2px;
+    background-color: @color3;
+    color: @color15;
+    border-radius: 20px;
 }
 
 /* HOVER TRANSITION SETTINGS for all modules except tray and clock ----- */
@@ -134,15 +132,18 @@ window#waybar {
 #workspaces button:hover,
 #workspaces button.empty:hover {
 
-    transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
     
+    border-radius: 20px;
+    transition: background-color 0.3s ease-in-out;
+     /*transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1); */
 }
 
 /* default tooltip settings-----*/
 tooltip {
-    background-color: alpha(@specialDark, .95);
-    border-radius: 2px;
-    border-style: double;
+    background-color: alpha(@color0, 1);
+    color: @color15;
+    border-radius: 20px;
+    border-style: none;
+    border-width: 0px;
     border-color: alpha(@special1, .69);
-    border-width: 1.5px;
 }

@@ -113,6 +113,10 @@
         "format": "|",
         "tooltip": false
     },
+    "custom/border": {
+        "format": "|",
+        "tooltip": false
+    },
     "group/expand": {
         "orientation": "horizontal",
         "drawer": {
@@ -162,20 +166,22 @@
 "cava": {
         "cava_config": "$HOME/.config/cava/config",
         "framerate": 30,
-        "bars": 24,
+        "bars": 30,
         "autosens": 1,
-        "lower_cutoff_freq": 50,
-        "higher_cutoff_freq": 10000,
-        "hide_on_silence": true,
-        "format_silent": "enjoy the silence",
-        "method": "pulse",
+        "sensitivity": 2,
+        "lower_cutoff_freq": 30,
+        "higher_cutoff_freq": 17000,
+        "method": "pipewire",
         "source": "auto",
         "stereo": true,
         "monstercat": false,
         "waves": false,
-        "reverse": false,
+        "sleep_timer": 1,
+        "format_silent": "enjoy the silence",
+        "hide_on_silence": false,
+        "reverse": true,
         "bar_delimiter": 0,
-        "noise_reduction": 0.1,
+        "noise_reduction": 0,
         "continuous_rendering": 1,
         "format-icons": ["⣀", "⣄", "⣤", "⣦", "⣶", "⣿" ]
        //"format-icons": ["·","∙","◦","●"],
@@ -188,13 +194,15 @@
 "mpris": {
 	"format": "{status_icon}  {artist} - {title}",
 	"format-paused": "{status_icon} {artist} - {title}",
+    "format-stopped": "shhh",
 	"player-icons": {
 		"default": "",
 		"mpv": "🎵"
 	},
 	"status-icons": {
 		"playing": "",
-        "paused": ""
+        "paused": "",
+        "stopped": "."
 	},
 	"ignored-players": ["firefox"],
     "tooltip": false
@@ -204,7 +212,6 @@
     "orientation": "horizontal",
     "modules": [
         "mpris",
-        "custom/endpoint",
         "cava"
     ]
 },

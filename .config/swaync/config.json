@@ -2,7 +2,7 @@
   "$schema": "/etc/xdg/swaync/configSchema.json",
   "positionX": "right",
   "positionY": "top",
-  "control-center-width": 350,
+  "control-center-width": 400,
   "control-center-height": -1,
   "control-center-margin-top": 0,
   "control-center-margin-bottom": 0,
@@ -25,28 +25,29 @@
   "hide-on-action": false,
   "script-fail-notify": true,
   "widgets": [
-    "label",
-    "buttons-grid",
     "mpris",
+    "title",
+    "notifications",
     "volume",
     "backlight",
-    "title",
-    "notifications"
+    "buttons-grid"
   ],
   "widget-config": {
     "title": {
-      "text": "[losertown notifications]$",
+      "text": "[losertown 󰜥 ]",
       "clear-all-button": true,
       "button-text": "󰆴"
     },
     "label": {
       "max-lines": 1,
-      "text": "[losertown ~]$"
+      "text": "losertown 󰜥 "
     },
     "mpris": {
-      "image-size": 77,
+      "show-album-art": "always",
+      "image-size": 50,
+      "image-radius": 60,
       "loop-carousel": false,
-      "autohide": true,
+      "autohide": false,
       "blacklist": [
         "playerctld"
       ]
@@ -93,5 +94,5 @@
       ]
     }
   },
-  "text-empty": "🌌 not even the abyss wants to stare back 🌌"
+  "text-empty": "🌑 still nothing, it's just you here 🌑"
 }

@@ -1,0 +1,28 @@
+{
+    "checksum": "91be9a8434ecb952654c27dff7a2d3ac",
+    "wallpaper": "/home/ctvrty/Pictures/wallpapers/image14.png",
+    "alpha": "100",
+    "special": {
+        "background": "#091025",
+        "foreground": "#c2c4c7",
+        "cursor": "#c2c4c7"
+    },
+    "colors": {
+        "color0": "#091025",
+        "color1": "#26244e",
+        "color2": "#562c45",
+        "color3": "#2f395b",
+        "color4": "#663b36",
+        "color5": "#7f5135",
+        "color6": "#876742",
+        "color7": "#91939b",
+        "color8": "#485786",
+        "color9": "#3229aa",
+        "color10": "#b32c81",
+        "color11": "#2d4db8",
+        "color12": "#c33c30",
+        "color13": "#cc7238",
+        "color14": "#d08e45",
+        "color15": "#c2c4c7"
+    }
+}

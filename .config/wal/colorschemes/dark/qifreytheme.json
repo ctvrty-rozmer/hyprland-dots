@@ -1,0 +1,28 @@
+{
+    "checksum": "91be9a8434ecb952654c27dff7a2d3ac",
+    "wallpaper": "/home/ctvrty/Pictures/wallpapers/qifrey.png",
+    "alpha": "100",
+    "special": {
+        "background": "#18171B",
+        "foreground": "#ebe7da",
+        "cursor": "#ebe7da"
+    },
+    "colors": {
+        "color0": "#18171B",
+        "color1": "#232528",
+        "color2": "#353148",
+        "color3": "#223a71",
+        "color4": "#375f91",
+        "color5": "#3bacba",
+        "color6": "#3dada9",
+        "color7": "#c3c7c1",
+        "color8": "#7b8587",
+        "color9": "#678480",
+        "color10": "#a2f5ec",
+        "color11": "#282747",
+        "color12": "#6a5538",
+        "color13": "#c4963b",
+        "color14": "#a9a09c",
+        "color15": "#ebe7da"
+    }
+}

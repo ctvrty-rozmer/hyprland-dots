@@ -1,13 +1,11 @@
 @import url('../../.cache/wal/colors-waybar.css');
-@import url(../handpickedcolors.css);
-@import url(notifications.css);
 
-@define-color text @special6;
-@define-color background alpha(@color0, 1);
-@define-color background-alt alpha(@color0, 1);
+@define-color text @color7;
+@define-color background @color1;
+@define-color backgroundalt @color0;
 @define-color selected @color13;
-@define-color hover alpha(@special4, .69);
-@define-color urgent @color8;
+@define-color hover @color13;
+@define-color urgent @color10;
 
 
 /* base settings ================================================== */
@@ -23,130 +21,130 @@
 /* background shenanigains ---------------------------------------- */
 .blank-window {
     background: transparent;
+    border-radius: 9% 1% 9% 9%;
+    padding-top: 10px;
+    padding-bottom: 40px;
 }
 
 /* CONTROL CENTER ================================================== */
 .control-center {
-    background: @specialDark;
-    border-radius: 4px;
-    border-style: double;
-    border-color: alpha(@special1, .69);
-    border-width: 1.5px;
-    padding-top: 6px;
-	padding-bottom: 12px;
-	padding-left: 6px;
-	padding-right: 6px;
-    margin: 2px 4px;
+    background: @color4;
+    border-radius: 9% 1% 9% 9%;
+    border-style: none;
+    border-width: 0px;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin: 0px 21px;
 
 }
 
 
-/* notis----------------------------------------------------------- */
+/* notis----------------------------------------------------------- 
+ background for notifications when stack is expanded */
 .control-center .notification-row .notification-background .normal{
-	background: rgba(15,15,15, .95);
-    border-radius: 4px;
-    border-bottom: 2px double alpha(@special1, .69);
-    margin: 6px 0px;
-    padding: 6px;
+    background: alpha(@color3, .9);
+    border-radius: 15px;
+    margin: 8px 16px;
+    padding: 3px 12px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .control-center .notification-row .notification-background .critical {
-    background: rgba(15,15,15, .95);
+/* background for critical notifications when stack is expanded */
+    background: alpha(@color3, .9);
+
     color: @urgent;
-    border-bottom: 2px double @urgent;
-    border-radius: 4px;
-    margin: 6px 0px;
-    padding: 6px;
+    border-bottom: 2px solid @urgent;
+    border-radius: 15px;
+    margin: 8px 16px;
+    padding: 3px 12px;
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 
 }
+.summary {
+    font-size: 1rem;
+    font-weight: 900;
+    color: @color15;
+}
+
+.body {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: @color7;
+
+}
 .control-center-list-placeholder {
-    color: alpha(@specialLight, .6);
+    // no notification background
+    color: @color7;
+    background: transparent;
+
 }
 .control-center .notification-row .notification-background .notification .notification-content {
     margin: 6px;
+    background: transparent;
 }
 
 .control-center .notification-row .notification-background .notification>*:last-child>* {
     min-height: 1.4em;
 }
 
-.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action {
-    background: @specialDark;
-    color: alpha(@specialLight, .6);
-    border-radius: 12px;
-    margin: 6px;
-}
+/*.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action {
+//     // idk
+//     background: @color10;
 
-.control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
-    background: @specialDark;
-}
+//     color: @color7;
+//     border-radius: 20px;
+//     margin: 6px;
+// }
 
-.control-center .notification-row .notification-background .notification>*:last-child>.notification-action:active {
-    background-color: @selected;
-}
+// .control-center .notification-row .notification-background .notification>*:last-child>* .notification-action:hover {
+//     background: @color1;
 
-.notification-critical {
-    border-radius: 4px;
-    border: @urgent;
-}
+// }
 
-.summary {
-    font-size: 1rem;
-    font-weight: 600;
-    color: @special6;
-}
+// .control-center .notification-row .notification-background .notification>*:last-child>.notification-action:active {
+//     background-color: @selected;
 
-.body {
-    font-size: 0.8rem;
-    font-weight: 400;
-    color: alpha(@special6, .40);
+ } */
 
-}
+
+
 
 
 
 
 /* buttons------------------------------------------------------------------ */
 
+
 .control-center .notification-row .notification-background .close-button {
-    background: transparent;
+    // background for x button to clear notifications on individual notifications on hover
     border-radius: 4px;
-    color: @hover;
-    padding: 3px;
-    margin-top: 2px;
-    margin-right: 1px;
+    color: @color14;
+    padding: 0px;
+    margin: 0px;
 }
-
-.control-center .notification-row .notification-background .close-button:hover {
-    background: transparent;
-	color: alpha(@specialLight, .8);
-    padding: 3px;
-}
-
 
 /* notifications expanded group------------------------------------------ */
 
 .notification-group {
     margin: 4px;
-    background: @specialDark;
+    background: transparent;
 }
 
 .notification-group-headers {
     font-weight: 600;
     font-size: 1.5em;
-    color: alpha(@specialLight, .6);
+    color: @color13;
 }
 
 
 .notification-group-icon {
-    color: @hover;
+    color: @color13;
 }
 
 .notification-group-collapse-button,
 .notification-group-close-all-button {
-    color: @text;
+    color: @color10;
     margin: 4px;
     border-radius: 4px;
     padding: 4px;
@@ -155,38 +153,42 @@
 
 .notification-group-collapse-button:hover,
 .notification-group-close-all-button:hover {
+    // color of collapse and clear button for notification stack when
     background: @hover;
-	color: @specialDark;
+    color: @color12;
 }
 
 .notification-group.collapsed .notification-row .notification {
+    // background color of notifications when collapsed in stack ONLY
     // background: linear-gradient(135deg, alpha(@background, .08) 0%, alpha(@background, .04) 100%);
-    background: rgba(15, 15, 15, .95);
+    background: alpha(@color3, 0.9);
 }
 .notification-group.collapsed .notification-row .notification.critical {
-    background: rgba(15, 15, 15, .95);   
+    // same as above but for only critical notis
+    background: alpha(@color3, 0.9);
 }
 
 /* WIDGET TIME ========================================================================== */
-
-/* noti clear button------------------------------------------------------------- */
+/* widget labels ------------------------------------------------------------------- */	
+.widget-label,
 .widget-title {
-    font-size: 1.2em;
+	font-size: 2em;
 	font-weight: 600;
-	color: alpha(@specialLight, .8);
-    margin: 3px;
+	color: @color15;
+    margin: 8px;
 }
 
+/* noti clear button------------------------------------------------------------- */
 .widget-title button {
-    background: alpha(@special11, .55);
-    color: alpha(@specialLight, .6);
+    // clear button bg
+    color: @color15;
     border-radius: 4px;
     padding: 4px 16px;
 }
 
 .widget-title button:hover {
-    background-color: @hover;
-	color: @specialDark;
+    background-color: alpha(@color3, 0.55);
+	color: @color15;
 	transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
 
 
@@ -197,48 +199,78 @@
     background-color: @selected;
 }
 
-/* widget label ------------------------------------------------------------------- */	
-.widget-label {
-	font-size: 1.2em;
-	font-weight: 600;
-	color: alpha(@specialLight, .8);
-	margin: 3px;
-}
+
 
 /* buttons grid menu--------------------------------------------------------------- */
+/*
+// wifi mic volume etc buttons background
+// .widget-buttons-grid {
+//     padding: 6px 10px;
+//     margin: 6px 0px;
+//     background: alpha(@backgroundalt, 0.6);
+//     display: flex;
+//     justify-content: center;
+
+// }
+
+
+// // wifi mic volume etc individual buttons
+// .widget-buttons-grid button {
+//     background: rgba(174,39,255,1);
+//     color: rgba(174,39,255,1);
+// }
+
+// .widget-buttons-grid button:hover {
+//     background: @color0;
+//     font-weight: 700;
+// 	transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+
+// }
+
+// .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {
+//     background-color: @color0;
+//     color: @color10;
+//     font-weight: 700;
+
+// } */
 .widget-buttons-grid {
-    font-size: 24px;
-    padding: 6px 2px;
-    margin: 6px 0px;
-    background: alpha(@special11, .55);
-	border-radius: 4px;
-	border-bottom: 2px solid alpha(@text, .06);
-    border: 1.5px double alpha(@special1, .69);
+    margin: 6px;
+	padding: 6px 12px;
+    border-radius: 50px;
+    background: @color3;
+    transition: 0.2s ease;
 
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button {
-    margin: 4px 10px;
-    padding: 6px 12px;
-    background: linear-gradient(135deg, alpha(@background, .08) 0%, alpha(@background, .04) 100%);
-    border-radius: 4px;
-    color: alpha(@specialLight, .8);
+    all: unset;
+    background: @color3;
+    min-width: 30px;
+    padding: 6px 6px;
+    margin: 6px;
+    min-height: 10px;
+    border-radius: 25px;
+    border: 1px solid @color13;
+    color: @color14;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button:hover {
-    background-color: alpha(@special4, .69);
-    color: @specialDark;
-    font-weight: 700;
-	transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+    transform: scale(1.1);
+    background: @color0;
+    color: @color14;
+
 
 }
 
 .widget-buttons-grid>flowbox>flowboxchild>button.toggle:checked {
-    background-color: alpha(@special4, .69);
-    color: @specialDark;
-    font-weight: 700;
+    background: @color0;
+    color: @color14;
+    font-weight: 00;
 
 }
+
 
 
 
@@ -247,108 +279,115 @@
 .widget-mpris {
 
     margin: 0px 0px;
-	margin-bottom: 2px;
+    margin-bottom: 2px;
     padding: 0;
-    background: alpha(@special11, .55);
-    border-radius: 4px;
-	border-bottom: 2px solid alpha(@text, .06);
-    border: 1.5px double alpha(@special1, .69);
+    background: @color1;
+    border: none;
 }
 
 /* background HAS to to have an opacity of 1 or ELSE */
 
 .widget-mpris .widget-mpris-player {
-    margin: 8px 8px;
-	padding: 7px 7px;
-    border-radius: 4px;
-    background: rgb(15,15,15);
+    margin: 6px;
+	padding: 6px 12px;
+    border-radius: 50px;
+    background: alpha(@color0, .9);
+    transition: 0.2s ease;
 }
 
 
 .widget-mpris .widget-mpris-player button {
     all: unset;
-    background: transparent;
-    min-width: 30px;
-    padding: 6px;
+    background: @color0;
+    min-width: 25px;
+    padding: 6px 12px;
+    margin: 6px;
     min-height: 10px;
-    color: alpha(@specialLight, .8);
-    font-size: 16px;
+    border-radius: 25px;
+    border: 1px solid @color14;
+    color: @color14;
+    font-size: 20px;
+    font-weight: 900;
 }
 
 .widget-mpris .widget-mpris-player button:hover {
-	border-radius: 4px;
+	border-radius: 25px;
     background-color: @hover;
-	color: @specialDark;
-	transition: background-color .9s cubic-bezier(0.25, 1, 0.5, 1), color .7s cubic-bezier(0.25, 1, 0.5, 1), font-weight .3s cubic-bezier(0.25, 1, 0.5, 1);
+	color: @color0;
+    transform: scale(1.1);
 
 }
 
 .widget-mpris .widget-mpris-player button:active {
-	border-radius: 4px;
-    background-color: @hover;
-	color: @specialDark;
+	border-radius: 25px;
+    background: alpha(@color14, .55);
+    color: alpha(@color0, 1);
+    padding: 8px 12px;
+    margin: 6px;
+    border-radius: 25px;
+    border: 1px solid @color14;
 }
 
 
 .widget-mpris .widget-mpris-player button:disabled {
-    color: alpha(@special6, 0.40);
+    color: alpha(@color14, 0.40);
 }
 
 
 .widget-mpris-title {
     font-weight: 600;
-    font-size: 10px;
-    color: alpha(@specialLight, .8);
-    margin-bottom: 0px;
-    padding: 2px 0px;
+    font-size: 15px;
+    color: @color15;
+    margin: 6px;
+    padding: 6px 12px;
 }
 
 .widget-mpris-subtitle {
     font-weight: 200;
-    font-size: 10px;
-    color: alpha(@special6, .40);
+    font-size: 12px;
+    color: @color15;
     line-height: 1rem;
-    margin: 2px 0px 0px 0px;
-    padding: 2px 0px 0px 0px;
+    margin: 6px;
+    padding: 6px 12px;
 }
 
 picture.mpris-background {
-    opacity: 0;
+    border-radius: 50px;
+    opacity: 0.25;
 }
-
-
-
+:root {
+    --mpris-album-art-image-radius: 50px;
+}
 
 /*volumeeeeeeeeeeee and also backlight------------------------------------------------------------ */
 
 .widget-volume,
 .widget-backlight {
-    background: alpha(@special11, .55);
-    border-radius: 4px;
-	padding: 6px 6px 6px 6px;
-    margin-top: 4px;
-	margin-bottom: .5px;
-    border: 1.5px double alpha(@special1, .69);
+    background: alpha(@color3, 1);
+    border-radius: 30px;
+    padding: 6px;
+    margin: 8px;
+    border: none;
 
 }
 
 .widget-volume {
-    border-bottom: 2px solid alpha(@text, .06);
+    border-bottom: none;
 }
 
 .widget-backlight {
-	padding-right: 52px;
-	border-bottom: 2px solid alpha(@text, .06);
-	padding-bottom: 6px;
-	padding-top: 6px;
+    padding-right: 52px;
+    border-bottom: none;
+    padding-bottom: 6px;
+    padding-top: 6px;
 
 }
 
 .widget-volume>box>button {
     background: @transparent;
-    border-radius: 4px;
+    border-radius: 20px;
     font-size: 1em;
-    color: @specialDark;
+    color: @color3;
     margin-left: 8px;
     margin-right: 6px;
     padding: 0px;
@@ -358,38 +397,39 @@ picture.mpris-background {
 }
 
 .widget-volume>box>button.toggle:hover {
-	background-color: @specialDark;
-    color: @specialDark;
+    background-color: alpha(@color13, 0.89);
+    transition: ease-in-out 0.3s;
+    color: @color15;
     font-weight: 700;
-	border-radius: 4px;
+    border-radius: 50px;
 }
 
 .widget-volume>box>button.toggle:checked {
-    background: alpha(@selected, .55);
-    color: @specialDark;
+    background: alpha(@color13, 0.89);
+    color: @color15;
     border: none;
 }
 
 
 .widget-volume trough,
 .widget-backlight trough {
-    background: alpha(@text, .08);
+    background: alpha(@color13, .08);
     border-radius: 4px;
-    min-height: 2px;
+    min-height: 4px;
     box-shadow: inset 0 1px 3px rgba(0, 0, 0, .1);
 }
 
 .widget-volume highlight,
 .widget-backlight highlight {
-    background: linear-gradient(90deg, @selected 0%, alpha(@special6, .45) 100%);
+    background: linear-gradient(90deg, @selected 0%, alpha(@color3, .45) 100%);
     border-radius: 12px;
-    box-shadow: 0 0 8px alpha(@selected, .3);
+    box-shadow: 0 0 8px alpha(@color0, .3);
 }
 
 .widget-volume label,
 .widget-backlight label {
     font-size: 16px;
-    color: @text;
+    color: @color15;
     margin-right: 16px;
     margin-left: 8px;
     opacity: 0.7;
@@ -397,9 +437,9 @@ picture.mpris-background {
 
 .widget-volume slider,
 .widget-backlight slider {
-    background: @selected;
+    background: @color13;
     border-radius: 50%;
-    border: 1px solid @special6;
+    border: 1px solid @color13;
     min-height: 10px;
     min-width: 10px;
     margin: -5px 0;
@@ -409,12 +449,12 @@ picture.mpris-background {
 .widget-volume slider:hover,
 .widget-backlight slider:hover {
     all: unset;
-    background: alpha(@special6, .8);
+    background: alpha(@color13, .8);
     border-radius: 50%;
     min-height: 12px;
     min-width: 12px;
     margin: -5px 0;
-    border: 2px solid @special6;
+    border: 2px solid @color13;
 }
 
 .per-app-volume {

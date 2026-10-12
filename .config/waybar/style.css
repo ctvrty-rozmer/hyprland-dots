@@ -4,33 +4,34 @@
 @import url('defaults.css');
 
 /* WORKSPACE SETTINGS ====== */
-#workspaces {
-    background: alpha(@special11, .55);
-}
 
 #workspaces button,
 #workspaces button.empty {
     all: unset;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-    border-radius: 2px;
-    margin: 2px 2px;
-    font-weight: 400;
+    min-width: 20px;
+    padding: 0px 4px;
+    margin: 4px;
+    border-radius: 20px;
 }
 
-#workspaces button.active,
-#workspaces button.empty.active,
+#workspaces button.active {
+    min-width: 50px;
+    background-color: @color3;
+}
 #workspaces button:hover,
+#workspaces button.empty.active,
 #workspaces button.empty:hover {
-    background-color: alpha(@special4, .69);
-    color: @specialDark;
-    font-weight: 700;
+    background-color: alpha(@color3, 0.75);
+    color: @color15;
+    padding: 0px 4px;
 }
 
 #workspaces button.empty {
-    color: alpha(@special6, .40);
+    color: @color7;
+}
+
+#workspaces button.urgent {
+    background-color: @color10;
 }
 
 
@@ -46,8 +47,7 @@
 }
 /* ====== CLOCK SETTINGS ====== */
 #clock {
-    font-weight: 700;
-    padding: 0px 7px;
+    padding: 0px 12px;
 }
 
 /* ====== EXPAND BUTTON SETTINGS ====== */
@@ -56,31 +56,31 @@
 }
 
 #custom-expand, #custom-expand-right {
-    background: transparent;
-    color: alpha(@special6, 1);
+    background: alpha(@color3, 1);
+    color: @color10;
     transition: all .3s ease;
 }
 
 #custom-endpoint {
-    color: alpha(@specialLight, .6);
+    color: @color10;
     background: transparent;
     text-shadow: 0px 0px 1.5px rgba(0, 0, 0, 1);
 
 }
 
 #custom-expand:hover, #custom-expand-right:hover {
-    color: alpha(@specialLight, 1);
-    text-shadow: 0 0 2px alpha(@color8, 1), 0 0 4px alpha(@color11, 1), 0 0 5px alpha(@color14, 1);
+    color: @color10;
+    text-shadow: 0 0 2px alpha(@color0, 1), 0 0 4px alpha(@color11, 1), 0 0 5px alpha(@color14, 1);
 
 }
 
 /* ====== TRAY SETTINGS ====== */
 #tray {
     transition: all .3s ease;
-    border-radius: 2px;
-    border-style: double;
-    border-width: .5px;
-    border-color: alpha(@special1, .69);
+    border-radius: 20px;
+    border-style: none;
+    border-width: 0px;
+    background-color: @color3;
 }
 
 #tray menu * {
@@ -96,9 +96,11 @@
 #pulseaudio,
 #microphone,
 #microphone.muted,
-#battery {
-    padding: 0px 7px;
-    margin: 2px 1px;
+#battery,
+#network,
+#bluetooth {
+    padding: 0px 12px;
+    margin: 0px 2px;
 
 }
 
@@ -125,66 +127,65 @@
 /* ====== NETWORKING MODULES ====== */
 
 
-/* -----network settings----- */
-#network {
-    padding: 0px 7px;
-    margin: 2px 2px;
-
-}
-
-/* -----bluetooth settings----- */
-#bluetooth {
-    padding: 0px 7px;
-    margin: 2px 2px;
-}
 
 
 /* ====== NOTIFICATION SETTINGS ====== */
 #custom-notification {
     margin: 0px 2px;
-    padding: 0px 7px;
-    border-radius: 2px;
-    border-style: double;
-    border-width: 1.5px;
-    border-color: alpha(@special1, .69);
+    padding: 0px 24px;
+    border-radius: 20px;
+    border-style: none;
+    border-width: 0px;
 }
 
 #custom-notification:hover {
-    color: @color8;
-    font-weight: 700;
+    color: @color15;
+    background-color: @color3;
 }
 
 #cava {
-
-    letter-spacing: -2px;
-    font-weight: 700;
-    padding: 0px 7px;
+    letter-spacing: 1px;
+    min-width: 150px;
+    padding: 0px 4px;
+    color: @color10;
+    opacity: 1;
+    transition-property: color, opacity, letter-spacing;
+    transition-duration: 0.4s;
+    transition-timing-function: cubic-bezier(0.22, 1, 0.36, 1);
 }
+
+#cava:not(.silent) {
+    color: @color15;
+    opacity: 1;
+}
+
+#cava.silent {
+    color: @color15;
+    opacity: 0.6;
+    letter-spacing: 0.1px;
+}
+
+#cava.updated {
+    color: @color15;
+    transition-duration: 0.1s;
+}
+
+
 #mpris {
-    color: @special6;
-    padding: 0px 7px;
-    font-weight: 700;
+    padding: 0px 6px;
 }
 
 #musicplayer {
-    background: alpha(@special11, .55);
-    padding: 0px 7px;
-    color: @special6;
-    margin: 0px 2px;
-    border-radius: 2px;
-    border-style: double;
-    border-width: 1.5px;
-    border-color: alpha(@special1, .69);
+    padding: 0px 12px;
+    border-radius: 20px;
 }
 
 #custom-weather {
-    background: alpha(@special11, .55);
-    padding: 0px 7px;
-    color: @special6;
+    padding: 0px 12px;
     margin: 0px 2px;
-    font-weight: 700;
-    border-radius: 2px;
-    border-style: double;
-    border-width: .5px;
-    border-color: alpha(@special1, .69);
+    border-radius: 20px;
+    border-style: none;
+    border-width: 0px;
+    background-color: alpha(@color3, 0.95);
+    color: alpha(@color13, 1);
 }

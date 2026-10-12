@@ -1,6 +1,4 @@
 @import url('../../.cache/wal/colors-waybar.css');
-@import url(central_control.css);
-@import url(../../handpickedcolors.css);
 * {
 
   /*background-alt:        @color1;      Buttons background */
@@ -9,7 +7,7 @@
   /*urgent:                @color6;      Urgency critical */
   /*text-selected:         @background; */
 
-  color: @text;
+  color: @color15;
 
   font-size: 8px;
   font-family: "BitstromWera Nerd Font";
@@ -24,12 +22,10 @@
 }
 
 .floating-notifications.background .notification-row .notification-background {
-  background: alpha(@background,1);
+  background: @color4;
   box-shadow: 0 0 8px 0 rgba(0,0,0,.6);
-  border: 1px;
-  border-color: alpha(@special1, .69);
-  border-style: double;
-  border-radius: 2px;
+  border: 0px;
+  border-radius: 50px;
   margin: 6px;
   padding: 0;
 }
@@ -41,8 +37,8 @@
 
 .floating-notifications.background .notification-row .notification-background .notification.critical {
   color: @urgent;
-  background: alpha(@background,1);
-  border-radius: 2px;
+  background: @color4;
+  border-radius: 50px;
   border-bottom: @urgent solid 2px;
 }
 
@@ -56,7 +52,7 @@
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action {
   border-radius: 8px;
-  background-color: @background-alt ;
+  background-color: @color4;
   margin: 6px;
   border: 1px solid transparent;
 }
@@ -67,7 +63,7 @@
 }
 
 .floating-notifications.background .notification-row .notification-background .notification > *:last-child > * .notification-action:active {
-  background-color: @selected;
+  background-color: @color4;
   color: @background;
 }
 
